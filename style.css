@@ -1,0 +1,187 @@
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+    #video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+    }
+
+    #botao {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      top: 7px;
+      position: absolute;
+      left: 97%;  
+  }
+  
+  
+  #botao img {
+      width: 100%;
+      height: auto;
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo {
+  top: 10px;
+  left: 50%;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.marca-dagua {
+  position: fixed;
+  bottom: 20px;
+  top: 97%;
+  right: 20px;
+  color: rgba(131, 131, 131, 0.432);
+  font-size: 14px;
+  font-style: italic;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+  .content {
+      max-width: 80%;
+  }
+}
+
+/* Media query para telas ainda menores */
+@media screen and (max-width: 480px) {
+  .content {
+      max-width: 90%;
+  }
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Inicialmente oculto */
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  transition: left 0.3s ease; /* Transição suave ao abrir e fechar */
+  z-index: 999;
+}
+
+#botao {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999; /* Para garantir que fique acima do menu */
+}
+
+.menu-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  top: 15%;
+  transform: translateY(-50%);
+}
+
+
+.menu-btn:hover {
+  background-color: #333; /* Cor de fundo ao passar o mouse */
+}
+
+.textocentral {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  position: absolute; /* Necessário para que top e transform funcionem corretamente */
+  top: 60%;
+  left: 50%; /* Adicionado para centralizar horizontalmente */
+  transform: translate(-50%, -50%); /* Corrigido para usar % e adicionar a unidade de medida */
+}
+
+.titulo {
+position: relative;
+top: -100px;
+}
+
